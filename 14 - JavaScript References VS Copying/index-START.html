@@ -9,8 +9,42 @@
   <script>
     // start with strings, numbers and booleans
 
+    let ten = 10
+    let hun = 100
+    console.log(ten, hun);
+    let cop = hun
+    console.log(ten, cop, hun);
+    cop = 200
+    console.log(ten, cop, hun);
+    let mow = 300
+    let tow = 1
+    let show = tow
+    tow = 15
+    console.log(show);
+    console.log(tow);
+    console.clear();
+
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+    let team = function players(a,b,c){
+      console.log(mow);
+    }
+    // console.log(team());
+    // console.log(team.length)
+
+    let players1 = players.concat(["","house"])
+    let player2 = players.slice(1).concat(players.slice(0,1))
+    let player3 = Array.from(players)
+    let player4 = [...player2]
+    players[0] = "cookie"
+
+    console.log(players);
+    console.log(players1);
+    console.log(player2);
+    console.log(player3);
+    console.log(player4);
+    console.clear();
 
     // and we want to make a copy of it.
 
@@ -41,9 +75,28 @@
       name: 'Wes Bos',
       age: 80
     };
+    let person1 = Object.assign({}, person)
+    person.age = 70
+    person.date = 91
 
+    let person2 = {
+      // drink: 'sbux',
+      // age: 80
+    }
+    person2.ag0 = {value:2}
+
+    console.log(person);
+    console.log(person1);
+    console.log(person2);
+    console.clear(
+    );
     // and think we make a copy:
-
+    let person3 = Object.assign({city:"sf"},person1)
+    console.log(person3);
+    console.log(person1);
+    let person4 = JSON.stringify(person)
+    console.log(person4);
+    console.log(JSON.parse(person4));
     // how do we take a copy instead?
 
     // We will hopefully soon see the object ...spread
