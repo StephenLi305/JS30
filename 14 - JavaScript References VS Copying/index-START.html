@@ -46,6 +46,7 @@
     console.log(player4);
     console.clear();
 
+
     // and we want to make a copy of it.
 
     // You might think we can just do something like this:
@@ -98,6 +99,17 @@
     console.log(person4);
     console.log(JSON.parse(person4));
     // how do we take a copy instead?
+    console.clear();
+
+    function run(){
+      return "hi"
+    }
+
+    let run2 = function running(){
+      return "running"
+    }
+
+    let run3 = run
 
     // We will hopefully soon see the object ...spread
 
