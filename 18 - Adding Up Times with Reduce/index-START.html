@@ -177,7 +177,7 @@
     <li data-time="1:56">
       Video 57
     </li>
-    <li data-time="4:04">
+    <li data-time="5:07">
       Video 58
     </li>
   </ul>
@@ -196,9 +196,15 @@
       return (total + vidSeconds);
     })
 
-  let secondsLeft = seconds
+  let secondsLeft = seconds;
 
-    console.log(seconds);
+  const hours = Math.floor(secondsLeft / 3600);
+  secondsLeft = secondsLeft % 3600;
+
+  const min = Math.floor(secondsLeft / 60);
+  secondsLeft = secondsLeft % 60;
+
+    console.log(hours, min, secondsLeft);
 
 </script>
 </body>
