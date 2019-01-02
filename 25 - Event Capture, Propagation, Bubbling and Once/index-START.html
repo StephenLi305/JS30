@@ -6,25 +6,27 @@
 </head>
 <body class="bod">
 
-  <div class="one">
+  <div class="oneSwa ggyT">
     <div class="two">
       <div class="three">
       </div>
     </div>
   </div>
+  <button>hi</button>
 
 <style>
   html {
     box-sizing: border-box;
   }
-  
-  *, *:before, *:after { 
-    box-sizing: inherit; 
+
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
   div {
     width: 100%;
-    padding: 100px;
+    height: 100%;
+    padding: 120px;
   }
 
   .one {
@@ -40,8 +42,29 @@
   }
 </style>
 
-<button></button>
 <script>
+
+  const divs = document.querySelectorAll('div')
+  const button = document.querySelector('button')
+  function logText(){
+    console.log(this.classList);
+    // console.log(this.classList.value);
+  }
+  console.log(divs);
+  // divs.forEach(div => div.addEventListener('click', logText, {
+  //   capture: true,
+  //   once: true
+  // }))
+  divs.addEventListener('click', logText, {
+    capture: true,
+    once: true
+  })
+
+  button.addEventListener('click',() => console.log("this is a buttoon!!"),{
+    once:false
+  })
+
+
 
 </script>
 </body>
